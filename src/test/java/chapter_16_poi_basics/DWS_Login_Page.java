@@ -72,6 +72,28 @@ public class DWS_Login_Page {
 			
 			
 		}
+		@Test(dataProvider="Login data")
+		public void login1(String username,String Password)
+		{
+			WebDriver driver=new ChromeDriver();
+			
+			driver.manage().window().maximize();
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+			
+			driver.get("https://demowebshop.tricentis.com");
+			
+			driver.findElement(By.linkText("Log in")).click();
+			
+			driver.findElement(By.id("Email")).sendKeys(username);
+			
+			driver.findElement(By.id("Password")).sendKeys(Password);
+			
+			driver.findElement(By.xpath("//input[@value='Log in']")).click();
+			
+			driver.quit();
+			
+		}
 	}
 	
 
