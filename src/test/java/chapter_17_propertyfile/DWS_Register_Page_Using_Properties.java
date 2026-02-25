@@ -74,8 +74,11 @@ public class DWS_Register_Page_Using_Properties {
 				
 		}
 		case "Edge":
+		{
 			System.out.println("No output");
+			System.out.println("no output");
 			break;
+		}
 			
 		
 		
