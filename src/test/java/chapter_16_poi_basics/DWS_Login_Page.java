@@ -51,7 +51,7 @@ public class DWS_Login_Page {
 		}
 		@Test(dataProvider="Login data")
 		public void login(String username,String Password)
-		{
+		
 			WebDriver driver=new ChromeDriver();
 			
 			driver.manage().window().maximize();
